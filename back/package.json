@@ -1,0 +1,25 @@
+{
+  "name": "back",
+  "version": "1.0.0",
+  "description": "Pandore backend",
+  "main": "index.js",
+  "repository": "git@github.com:titiwantes/Pandore.git",
+  "author": "Thierry Masumbuko",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "test": "node index.js",
+    "start": "nodemon index.js"
+  },
+  "dependencies": {
+    "@sendgrid/mail": "^7.6.0",
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^6.1.2",
+    "path": "^0.12.7",
+    "randomatic": "^3.1.1"
+  }
+}
