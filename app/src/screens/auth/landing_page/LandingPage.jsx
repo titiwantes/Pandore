@@ -5,6 +5,8 @@ import {View, Image, StyleSheet, Text} from 'react-native';
 
 import LandingPic from '../../../assets/images/LandingPic.png'
 
+const mainColor = "#FD9D5D"
+
 export default function LandingPage(props){
 
     return (
@@ -17,15 +19,22 @@ export default function LandingPage(props){
             </View>
 
             <View style={styles.mainView}>
-                <Text style={styles.title}>Bienvenue</Text>
-                <Text>coucoucoucpcu</Text>
-            
-                <View style={styles.buttons}>
-                    <BigButton text='Connexion'/>
-                    <BigButton reverted text="S'incsrire"/>
+                <View style={styles.message}>
+                    <Text style={styles.title}>Bienvenue</Text>
+                    <Text style={styles.landingText}>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sagittis dignissim commodo.
+                    Pellentesque blandit tristique consequat. Curabitur in justo laoreet
+                    </Text>
                 </View>
-
-
+               
+                <View style={styles.buttons}>
+                    <View style={styles.button}>
+                        <BigButton text='Connexion' width='100%'/>
+                    </View>
+                    <View style={styles.button}>
+                        <BigButton reverted text="S'incsrire" width='100%'/>
+                    </View>
+                </View>
             </View>
 
 
@@ -51,15 +60,20 @@ const styles = StyleSheet.create({
 
     mainView:{
         flex: 1,
-        backgroundColor: 'red'
+        padding: 30,
+        justifyContent:'space-between'
     },
     title:{
-        color: 'black'
+        color: mainColor,
+        fontSize:20,
+        paddingBottom: 20,
+        fontWeight: '600'
     },
-    buttons:{
-        width: '100%',
-        alignItems:'center',
-        backgroundColor: 'blue'
-    }
+
+    landingText:{color: mainColor, fontWeight: '400'},
+
+    message:{justifyContent: 'space-between'},
+
+    button:{paddingBottom: 20,}
 
 })

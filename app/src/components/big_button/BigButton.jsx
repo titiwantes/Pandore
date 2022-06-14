@@ -10,7 +10,7 @@ export default function BigButton(props){
 
     return (
             <TouchableOpacity style={styles(props).container} onPress={props.onPress}>
-                <Text style={styles.text}>{props.text}</Text>
+                <Text style={styles(props).text}>{props.text}</Text>
             </TouchableOpacity>
     )
 }
@@ -27,8 +27,7 @@ const filled = (props) => StyleSheet.create({
     },
     text:{
         color: 'white',
-        fontSize: 20,
-        fontWeight: 'bolder'
+        fontWeight: '600'
     }
 })
 
@@ -48,6 +47,6 @@ const border = (props) => StyleSheet.create({
     },
     text:{
         color: mainColor,
-        fontSize: 20,
+        fontWeight: '600'
     }
 })
