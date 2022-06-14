@@ -9,19 +9,21 @@ export default function BigButton(props){
     const styles = props.reverted ?  border : filled
 
     return (
-            <TouchableOpacity style={styles.container} onPress={props.onPress}>
+            <TouchableOpacity style={styles(props).container} onPress={props.onPress}>
                 <Text style={styles.text}>{props.text}</Text>
             </TouchableOpacity>
     )
 }
 
-const filled = StyleSheet.create({
+const filled = (props) => StyleSheet.create({
     container:{
-        width: '18%',
+        width: props.width,
         backgroundColor: mainColor,
-        paddingVertical: 10,
-        borderRadius: 13,
-        alignItems: 'center'
+        paddingVertical: 20,
+        borderRadius: 20,
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
     },
     text:{
         color: 'white',
@@ -30,16 +32,19 @@ const filled = StyleSheet.create({
     }
 })
 
-const border = StyleSheet.create({
+const border = (props) => StyleSheet.create({
     container:{
+        width: props.width,
         backgroundColor: 'white',
+        display: 'flex',
         alignItems: 'center',
-        paddingVertical: 10,
+        justifyContent: 'center',
 
+        paddingVertical: 20,
         borderWidth: 1.5,
-        borderRadius: 13,
+        borderRadius: 20,
         borderColor: mainColor,
-
+    
     },
     text:{
         color: mainColor,
